@@ -8,7 +8,7 @@ client.connect((host, port))
 name = input("Enter your preferred character: ")[0].encode('UTF-8')
 
 from_server = client.recv(4096)
-print(from_server.decode('UTF-8'))
+print("\n"+from_server.decode('UTF-8'))
 client.send(b"hi$client1$" + name)
 
 
